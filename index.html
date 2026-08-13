@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Início — DPInflatables</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Basic helper styles in case css/style.css is missing */
+    .carousel-width { position: relative; max-width:1200px; margin:0 auto; }
+    .carousel-main { position: relative; overflow: hidden; }
+    .carousel-main .item { display: none; width:100%; box-sizing: border-box; }
+    .carousel-main .item.active { display: block; }
+    .carousel-main img { width:100%; height:auto; display:block; }
+
+    /* Prev/Next buttons */
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.45);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 30;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      border: none;
+    }
+    .carousel-nav:focus { outline: 2px solid #fff; }
+    .carousel-prev { left: 12px; }
+    .carousel-next { right: 12px; }
+
+    /* Small dots (optional) */
+    .carousel-dots {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 14px;
+      display:flex;
+      gap:8px;
+      z-index: 30;
+    }
+    .carousel-dots button {
+      width:10px; height:10px; border-radius:50%; border:none; background:rgba(255,255,255,0.4); cursor:pointer;
+    }
+    .carousel-dots button.active { background:#fff; }
+
+    /* Footer helper styles (kept minimal, your css will override) */
+    .footer-column img { max-height:28px; margin-right:10px; vertical-align:middle; }
+    .footer-column ul { padding:0; margin:0; list-style:none; }
+    .footer-column li { margin-bottom:10px; display:flex; align-items:center; }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a href="/index.html" class="brand">
+        <span class="logo"></span>
+        <span>DP Inflatables</span><span class="badge">PT</span>
+      </a>
+      <button class="menu-btn" aria-label="Menu">Menu</button>
+      <div class="navlinks">
+        <div class="dropdown">
+          <a href="#" class="dd-toggle" data-dropdown>Infláveis para aluguer</a>
+          <div class="dropdown-menu">
+            <a href="/Gonflables en location/Gonflagessportifs.html" target="_blank" rel="noreferrer">Infláveis desportivos</a>
+            <a href="/Gonflables en location/Gonflagesinfantiles.html" target="_blank" rel="noreferrer">Infláveis infantis</a>
+            <a href="/Spheres.html">Esferas</a>
+            <a href="/Dirigeables.html">Dirigíveis</a>
+            <a href="/Tentes.html">Tendas</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#" class="dd-toggle" data-dropdown>Infláveis à venda</a>
+          <div class="dropdown-menu">
+            <a href="/Arches.html">Arcos insufláveis</a>
+            <a href="/Tentes.html">Tendas insufláveis</a>
+            <a href="/Gonflables en vente/Bouteillesgonflables.html" target="_blank" rel="noreferrer">Garrafa insuflável</a>
+            <a href="/Ecrans.html">Ecrãs de cinema</a>
+            <a href="/Gonflables en vente/Ballonsstatiques.html" target="_blank" rel="noreferrer">Balões estáticos</a>
+            <a href="/Gonflables en vente/Minisgonflagesdesign.html" target="_blank" rel="noreferrer">Mini insufláveis de design</a>
+            <a href="/Mascottes.html">Mascotes publicitárias</a>
+            <a href="/Gonflables en vente/GonflagesdeNoel.html" target="_blank" rel="noreferrer">Insufláveis de Natal</a>
+            <a href="/Dirigeables.html">Dirigíveis de hélio</a>
+            <a href="/Spheres.html">Esferas de hélio</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#" class="dd-toggle" data-dropdown>Mais insufláveis</a>
+          <div class="dropdown-menu">
+            <a href="/Plus de gonflages/TentesLiberte.html" target="_blank" rel="noreferrer">Tendas Liberté</a>
+            <a href="/Plus de gonflages/TentesAirone.html" target="_blank" rel="noreferrer">Tendas Airone</a>
+            <a href="/Plus de gonflages/Jaimas gonflables.html" target="_blank" rel="noreferrer">Jaimas insufláveis</a>
+            <a href="/Plus de gonflages/TentesPagodas.html" target="_blank" rel="noreferrer">Tendas Pagoda</a>
+            <a href="/Plus de gonflages/TentesDuplex.html" target="_blank" rel="noreferrer">Tendas Duplex</a>
+            <a href="/Plus de gonflages/BoulesZorb.html" target="_blank" rel="noreferrer">Bolas Zorb</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#" class="dd-toggle" data-dropdown>Cenografias insufláveis — venda & aluguer</a>
+          <div class="dropdown-menu">
+            <a href="/Scénographies Gonflables et vente & location/Bullesgonflages.html" target="_blank" rel="noreferrer">Bolhas insufláveis</a>
+            <a href="/Scénographies Gonflables et vente & location/Architecturegonflable.html" target="_blank" rel="noreferrer">Arquitetura insuflável</a>
+            <a href="/Scénographies Gonflables et vente & location/Confettis.html" target="_blank" rel="noreferrer">Confetis</a>
+            <a href="/Scénographies Gonflables et vente & location/Dragons.html" target="_blank" rel="noreferrer">Dragões</a>
+            <a href="/Scénographies Gonflables et vente & location/Chariots.html" target="_blank" rel="noreferrer">Carrinhos</a>
+            <a href="/Scénographies Gonflables et vente & location/Fleurs.html" target="_blank" rel="noreferrer">Flores</a>
+            <a href="/Scénographies Gonflables et vente & location/Magiciens.html" target="_blank" rel="noreferrer">Mágicos</a>
+            <a href="/Scénographies Gonflables et vente & location/Mondemarin.html" target="_blank" rel="noreferrer">Mundo marinho</a>
+            <a href="/Scénographies Gonflables et vente & location/Lettresetnuméros.html" target="_blank" rel="noreferrer">Letras e números</a>
+            <a href="/Scénographies Gonflables et vente & location/Mouvement.html" target="_blank" rel="noreferrer">Movimento</a>
+            <a href="/Scénographies Gonflables et vente & location/Planetes.html" target="_blank" rel="noreferrer">Planetas</a>
+            <a href="/Spheres.html" target="_blank" rel="noreferrer">Esferas</a>
+            <a href="/Scénographies Gonflables et vente & location/Vitrines.html" target="_blank" rel="noreferrer">Montras</a>
+            <a href="/Scénographies Gonflables et vente & location/Colonnesetcones.html" target="_blank" rel="noreferrer">Colunas e cones</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#" class="dd-toggle" data-dropdown>Dpointgroup.com</a>
+          <div class="dropdown-menu">
+            <a href="http://www.dpointgroup.com" target="_blank" rel="noreferrer">Dpointgroup (site)</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const nav = document.querySelector('.header .nav');
+  if (!nav) return;
+  const menuBtn = nav.querySelector('.menu-btn');
+  if (menuBtn) {
+    menuBtn.addEventListener('click', () => nav.classList.toggle('open'));
+  }
+  const toggles = nav.querySelectorAll('[data-dropdown]');
+  toggles.forEach(t => {
+    t.addEventListener('click', (e) => {
+      e.preventDefault();
+      const dd = t.closest('.dropdown');
+      const isOpen = dd.classList.contains('open');
+      nav.querySelectorAll('.dropdown.open').forEach(x => x.classList.remove('open'));
+      dd.classList.toggle('open', !isOpen);
+    });
+  });
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target)) {
+      nav.querySelectorAll('.dropdown.open').forEach(x => x.classList.remove('open'));
+      nav.classList.remove('open');
+    }
+  });
+});
+</script>
+
+<section class="section background-primary">
+  <div class="carousel-width">
+    <div class="carousel-main" id="mainCarousel" aria-roledescription="carousel">
+      <div class="item active" role="group" aria-label="1 of 9">
+        <img src="img/slider03.jpg" alt="Slide 1">
+      </div>
+      <div class="item" role="group" aria-label="2 of 9">
+        <img src="img/slider02.jpg" alt="Slide 2">
+      </div>
+      <div class="item" role="group" aria-label="3 of 9">
+        <img src="img/slider07.jpg" alt="Slide 3">
+      </div>
+      <div class="item" role="group" aria-label="4 of 9">
+        <img src="img/slider04.jpg" alt="Slide 4">
+      </div>
+      <div class="item" role="group" aria-label="5 of 9">
+        <img src="img/slider05.jpg" alt="Slide 5">
+      </div>
+      <div class="item" role="group" aria-label="6 of 9">
+        <img src="img/slider06.jpg" alt="Slide 6">
+      </div>
+      <div class="item" role="group" aria-label="7 of 9">
+        <img src="img/slider08.jpg" alt="Slide 7">
+      </div>
+      <div class="item" role="group" aria-label="8 of 9">
+        <img src="img/slider09.jpg" alt="Slide 8">
+      </div>
+      <div class="item" role="group" aria-label="9 of 9">
+        <img src="img/slider10.jpg" alt="Slide 9">
+      </div>
+
+      <!-- Prev / Next buttons -->
+      <button class="carousel-nav carousel-prev" id="carouselPrev" aria-label="Anterior">
+        &#10094;
+      </button>
+      <button class="carousel-nav carousel-next" id="carouselNext" aria-label="Seguinte">
+        &#10095;
+      </button>
+
+      <!-- Dots -->
+      <div class="carousel-dots" id="carouselDots" aria-hidden="false"></div>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+  <div class="grid">
+    <a class="card" href="Catalogue.html">
+      <img src="img/transparent.png" alt="Catalogue">
+      <h3>Catalogue</h3><p>Parcourez toutes nos familles de produits.</p>
+    </a>
+    <a class="card" href="Ecrans.html">
+      <img src="img/pantallas_hinchables3.jpg" alt="Écrans">
+      <h3>Écrans</h3><p>Écrans de cinéma gonflables en location et en vente.</p>
+    </a>
+    <a class="card" href="Dirigeables.html">
+      <img src="img/zepelin-10-m-llargada.gif" alt="Dirigeables">
+      <h3>Dirigeables</h3><p>Hélium, sphères et zeppelins personnalisés.</p>
+    </a>
+    <a class="card" href="Arches.html">
+      <img src="img/arco_500.jpg" alt="Arches">
+      <h3>Arches</h3><p>Arches gonflables publicitaires et sportives.</p>
+    </a>
+    <a class="card" href="Tentes.html">
+      <img src="img/carpas_bell_500.jpg" alt="Tentes">
+      <h3>Tentes</h3><p>Tentes gonflables et structures modulaires.</p>
+    </a>
+    <a class="card" href="Mascottes.html">
+      <img src="img/corporeo250.jpg" alt="Mascottes">
+      <h3>Mascotte</h3><p>Mascottes et costumes publicitaires sur-mesure.</p>
+    </a>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <section class="section background-dark">
+    <div class="line">
+      <div class="margin" style="display:flex; gap:24px; flex-wrap:wrap;">
+
+        <!-- Column 1: Contact, slogan, about -->
+        <div class="s-12 m-12 l-4 footer-column footer-contact" style="flex:1 1 320px; min-width:260px;">
+          <h4 class="text-uppercase text-strong">Contact</h4>
+
+          <div class="line" aria-hidden="true">
+            <div style="display:inline-block; width:28px; text-align:center; vertical-align:top;">
+              <i class="icon-placepin text-primary text-size-12"></i>
+            </div>
+            <div style="display:inline-block; width:calc(100% - 36px);">
+              <p><strong>Adresse :</strong> Carrer Pere IV, 51, Barcelona, Espagne</p>
+            </div>
+          </div>
+
+          <div class="line">
+            <div style="display:inline-block; width:28px; text-align:center; vertical-align:top;">
+              <i class="icon-mail text-primary text-size-12"></i>
+            </div>
+            <div style="display:inline-block; width:calc(100% - 36px);">
+              <p><a href="mailto:info@dpinflatables.com" class="text-primary-hover"><strong>E-mail :</strong> info@dpinflatables.com</a></p>
+            </div>
+          </div>
+
+          <div class="line">
+            <div style="display:inline-block; width:28px; text-align:center; vertical-align:top;">
+              <i class="icon-smartphone text-primary text-size-12"></i>
+            </div>
+            <div style="display:inline-block; width:calc(100% - 36px);">
+              <p><strong>Téléphone :</strong> (+34) 902 010 716 ou (+34) 625 766 008</p>
+            </div>
+          </div>
+
+          <h4 class="text-uppercase text-strong" style="margin-top:16px;">Notre slogan</h4>
+          <p class="text-size-20"><em>« Nous visons le point le plus haut. »</em></p>
+
+          <h4 class="text-uppercase text-strong margin-top-30" style="margin-top:22px;">À propos de notre société</h4>
+          <div style="display:flex; align-items:flex-start; gap:12px;">
+            <a class="image-hover-zoom" href="https://www.dpointgroup.com" target="_blank" rel="noreferrer">
+              <img src="img/FooterLogo.jpg" alt="Logo DP Inflatables" style="max-width:84px; height:auto; border-radius:4px;">
+            </a>
+            <div style="flex:1">
+              <img src="img/madeinspain.jpg" alt="Made in Spain" style="max-width:140px; height:auto; display:block; margin-bottom:6px;">
+              <p style="margin:0;">Nous fabriquons des produits gonflables et livrons depuis l'Espagne vers l'Europe et plus encore.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Flags & websites -->
+        <div class="s-12 m-12 l-4 footer-column footer-flags" style="flex:0 0 220px; min-width:200px;">
+          <h4 class="text-uppercase text-strong">Sites internationaux</h4>
+          <ul aria-label="Sites par pays">
+            <li><img src="img/italy.png" alt="Italie"> <a href="https://www.dpinflatables.it" target="_blank" rel="noreferrer">dpinflatables.it</a></li>
+            <li><img src="img/portugal.png" alt="Portugal"> <a href="https://www.dpinflatables.info" target="_blank" rel="noreferrer">dpinflatables.info</a></li>
+            <li><img src="img/usa.png" alt="États-Unis"> <a href="https://www.dpinflatables.net" target="_blank" rel="noreferrer">dpinflatables.net</a></li>
+            <li><img src="img/uk.png" alt="Royaume-Uni"> <a href="https://www.dpinflatables.net" target="_blank" rel="noreferrer">dpinflatables.net (UK)</a></li>
+            <li><img src="img/france.png" alt="France"> <a href="https://www.dpinflatables.fr" target="_blank" rel="noreferrer">dpinflatables.fr</a></li>
+            <li><img src="img/spain.png" alt="Espagne"> <a href="https://www.dpinflatables.com" target="_blank" rel="noreferrer">dpinflatables.com</a></li>
+            <li><img src="img/germany.png" alt="Allemagne"> <a href="https://www.dpinflatables.de" target="_blank" rel="noreferrer">dpinflatables.de</a></li>
+          </ul>
+          <p style="margin-top:12px; font-size:0.92rem;">Accédez aux sites régionaux pour des informations locales et des devis.</p>
+        </div>
+
+        <!-- Column 3: Social links -->
+        <div class="s-12 m-12 l-4 footer-column footer-social" style="flex:1 1 260px; min-width:220px;">
+          <h4 class="text-uppercase text-strong">Réseaux sociaux</h4>
+
+          <div style="display:flex; align-items:flex-start; gap:10px; margin-top:6px;">
+            <div style="width:36px; text-align:center;"><img src="img/twitter.png" alt="Twitter" style="width:32px;"></div>
+            <div>
+              <h4 class="text-strong margin-bottom-0" style="margin:0 0 6px 0;">Twitter</h4>
+              <a href="https://twitter.com/danielbukin" target="_blank" rel="noreferrer">https://twitter.com/danielbukin</a>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:flex-start; gap:10px; margin-top:12px;">
+            <div style="width:36px; text-align:center;"><img src="img/instagram.png" alt="Instagram" style="width:32px;"></div>
+            <div>
+              <h4 class="text-strong margin-bottom-0" style="margin:0 0 6px 0;">Instagram</h4>
+              <a href="https://www.instagram.com/dpoint_group" target="_blank" rel="noreferrer">https://www.instagram.com/dpoint_group</a>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:flex-start; gap:10px; margin-top:12px;">
+            <div style="width:36px; text-align:center;"><img src="img/facebook.png" alt="Facebook" style="width:32px;"></div>
+            <div>
+              <h4 class="text-strong margin-bottom-0" style="margin:0 0 6px 0;">Facebook</h4>
+              <a href="https://www.facebook.com/dpointgroupespana" target="_blank" rel="noreferrer">https://www.facebook.com/dpointgroupespana</a>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:flex-start; gap:10px; margin-top:12px;">
+            <div style="width:36px; text-align:center;"><img src="img/linkedIn.png" alt="LinkedIn" style="width:32px;"></div>
+            <div>
+              <h4 class="text-strong margin-bottom-0" style="margin:0 0 6px 0;">LinkedIn</h4>
+              <a href="https://www.linkedin.com/company/dpointgroup" target="_blank" rel="noreferrer">https://www.linkedin.com/company/dpointgroup</a>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:flex-start; gap:10px; margin-top:12px;">
+            <div style="width:36px; text-align:center;"><img src="img/skype.png" alt="Skype" style="width:32px;"></div>
+            <div>
+              <h4 class="text-strong margin-bottom-0" style="margin:0 0 6px 0;">Skype</h4>
+              <p style="margin:0;">dpinflatables</p>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:flex-start; gap:10px; margin-top:12px;">
+            <div style="width:36px; text-align:center;"><img src="img/youtube.png" alt="YouTube" style="width:32px;"></div>
+            <div>
+              <h4 class="text-strong margin-bottom-0" style="margin:0 0 6px 0;">YouTube</h4>
+              <a href="https://www.youtube.com/user/artisticservices" target="_blank" rel="noreferrer">https://www.youtube.com/user/artisticservices</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="break margin-top-bottom-0" style="border-color: rgba(0, 38, 51, 0.80);">
+
+  <section class="padding background-dark">
+    <div class="line footer-bottom" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+      <div class="s-12 l-6">
+        <p class="text-size-12" style="margin:0;">Copyright Dpointgroup 2002/2025</p>
+        <p class="text-size-12" style="margin:0;">Modèle par Vision Design - graphic zoo</p>
+      </div>
+      <div class="s-12 l-6" style="text-align:right;">
+        <a class="right text-size-12" href="https://github.com/thomasGHub" target="_blank" title="Responsee - lightweight responsive framework" style="text-decoration:none; color:inherit;">Design et intégration<br> par Dpoint Team</a>
+      </div>
+    </div>
+  </section>
+</footer>
+
+<script>
+  // Simple carousel JS (prev/next + dots + keyboard)
+  (function() {
+    const carousel = document.getElementById('mainCarousel');
+    if (!carousel) return;
+
+    const items = Array.from(carousel.querySelectorAll('.item'));
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    const dotsContainer = document.getElementById('carouselDots');
+    let index = items.findIndex(i => i.classList.contains('active'));
+    if (index < 0) index = 0;
+
+    // create dots
+    items.forEach((it, i) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.setAttribute('aria-label', 'Aller à la diapositive ' + (i+1));
+      btn.addEventListener('click', () => goTo(i));
+      if (i === index) btn.classList.add('active');
+      dotsContainer.appendChild(btn);
+    });
+
+    function update() {
+      items.forEach((it, i) => {
+        it.classList.toggle('active', i === index);
+        it.setAttribute('aria-hidden', i === index ? 'false' : 'true');
+      });
+      // update dots
+      Array.from(dotsContainer.children).forEach((d, i) => d.classList.toggle('active', i === index));
+    }
+
+    function prev() {
+      index = (index - 1 + items.length) % items.length;
+      update();
+    }
+    function next() {
+      index = (index + 1) % items.length;
+      update();
+    }
+    function goTo(i) {
+      index = (i + items.length) % items.length;
+      update();
+    }
+
+    prevBtn.addEventListener('click', prev);
+    nextBtn.addEventListener('click', next);
+
+    // keyboard support
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') prev();
+      if (e.key === 'ArrowRight') next();
+    });
+
+    // optional auto-play (commented out; enable if wanted)
+    // let autoplay = setInterval(next, 6000);
+    // carousel.addEventListener('mouseenter', () => clearInterval(autoplay));
+    // carousel.addEventListener('mouseleave', () => autoplay = setInterval(next, 6000));
+
+    update();
+  })();
+</script>
+
+<script src="js/main.js"></script>
+</body>
+</html>
